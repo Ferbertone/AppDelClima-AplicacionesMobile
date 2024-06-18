@@ -132,10 +132,13 @@ fun PronosticoItemView(item: ListForecast) {
     ) {
         Text(text = "Fecha: ${formatTimestamp(item.dt)}", style = MaterialTheme.typography.bodyMedium)
         Row {
-            Text(text = "Temp: ${item.main.temp}°", style = MaterialTheme.typography.bodyMedium)
-            Text(text = item.weather.firstOrNull()?.description ?: "", style = MaterialTheme.typography.bodyMedium)
+            Text(
+                text = "Temp: ${item.main.temp}°",
+                style = MaterialTheme.typography.bodyMedium)
+            Text(
+                text = item.weather.firstOrNull()?.description ?: "",
+                style = MaterialTheme.typography.bodyMedium)
         }
-
     }
 }
 
@@ -249,6 +252,8 @@ fun ClimaPreviewExitoso() {
                 st = 17.5,
                 minTemp = 10.15,
                 maxTemp = 15.15,
-                pronostico = pronosticoFicticio ), onAction = {})
+                pronostico = pronosticoFicticio
+            ),
+            onAction = {})
     }
 }

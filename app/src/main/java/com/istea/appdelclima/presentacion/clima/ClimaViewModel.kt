@@ -45,7 +45,7 @@ class ClimaViewModel(
                     st = clima.main.feels_like,
                     minTemp = clima.main.temp_min,
                     maxTemp = clima.main.temp_max,
-                    pronostico = pronostico.list.take(5)
+                    pronostico = pronostico.list.take(7)
                 )
             } catch (exception: Exception){
                 uiState = ClimaEstado.Error(exception.localizedMessage ?: "error desconocido")
